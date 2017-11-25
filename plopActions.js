@@ -22,6 +22,13 @@ const plopActions = {
         path: '{{dir dirPath}}/{{dashCase name}}.service.ts',
         templateFile: './templates/_service.ts'
       }
+    ],
+    module: [
+      {
+        type: 'add',
+        path: '{{dir dirPath}}/{{dashCase name}}.module.ts',
+        templateFile: './templates/_module.ts'
+      }
     ]
   }
   

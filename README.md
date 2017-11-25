@@ -14,3 +14,5 @@ $ npm install ngrx-gen -g
 - Select one of the option
 - Enter service name
 - Enter relative path of the folder
+
+![Alt text](sample/ngrx-gen-demo.png?raw=true "ngrx-gen Demo")

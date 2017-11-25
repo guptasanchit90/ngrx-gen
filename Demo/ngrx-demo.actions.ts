@@ -1,9 +1,9 @@
 import { Action } from '@ngrx/store';
 
 // Actions
-export const GET = '[{{ titleCase name }}] Get';
-export const GET_SUCCESS = '[{{ titleCase name }}] Get Success';
-export const GET_ERROR = '[{{ titleCase name }}] Get Error';
+export const GET = '[Ngrx Demo] Get';
+export const GET_SUCCESS = '[Ngrx Demo] Get Success';
+export const GET_ERROR = '[Ngrx Demo] Get Error';
 
 // Create actions with or without payload
 export class GetAction implements Action {

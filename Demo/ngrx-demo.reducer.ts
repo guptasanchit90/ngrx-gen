@@ -1,4 +1,4 @@
-import * as {{ camelCase name }} from './{{ lowerCase name }}.actions';
+import * as ngrxDemo from './ngrxdemo.actions';
 
 export interface State {
   loading: boolean;
@@ -12,16 +12,16 @@ export const initialState: State = {
   result: []
 }
 
-export function reducer(state = initialState, action: {{ camelCase name }}.Actions): State {
+export function reducer(state = initialState, action: ngrxDemo.Actions): State {
   switch (action.type) {
-    case {{ camelCase name }}.GET: {
+    case ngrxDemo.GET: {
       return {
         ...state,
         loading: true
       }
     }
 
-    case {{ camelCase name }}.GET_SUCCESS: {
+    case ngrxDemo.GET_SUCCESS: {
 
       return {
         ...state,
@@ -29,7 +29,7 @@ export function reducer(state = initialState, action: {{ camelCase name }}.Actio
       };
     }
 
-     case {{ camelCase name }}.GET_ERROR: {
+     case ngrxDemo.GET_ERROR: {
 
       return {
         ...state,

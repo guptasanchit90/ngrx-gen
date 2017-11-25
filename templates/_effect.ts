@@ -9,10 +9,6 @@ import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class {{ properCase name }}Effects {
-  constructor(
-    private {{ camelCase name }}Service: {{ properCase name }}Service,
-    private actions$: Actions
-  ) { }
 
   @Effect() get$ = this.actions$
       .ofType({{ camelCase name }}.GET)
@@ -22,4 +18,10 @@ export class {{ properCase name }}Effects {
         // If request fails, dispatch failed action
         .catch(() => Observable.of({ type: {{ camelCase name }}.GET_ERROR}))
       );
+
+  constructor(
+    private {{ camelCase name }}Service: {{ properCase name }}Service,
+    private actions$: Actions
+  ) { }
+  
 }

@@ -3,7 +3,7 @@ import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
-export class {{ properCase name }}Service {
+export class NgrxDemoService {
 
   constructor(private http: Http) { }
 

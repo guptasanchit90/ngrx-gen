@@ -34,18 +34,18 @@ const defaults = function(name) {
 }
 
 function ngrxWithService(plop) {
-    plop.setGenerator('ngrx with Service', 
-      Object.assign({}, defaults('ngrx with Services'), {
-        description: 'Actions, Reducer, Service and Effect',
-        actions: [].concat(plopActions.ngrx, plopActions.service)
+    plop.setGenerator('Generate complete module', 
+      Object.assign({}, defaults('Generate complete module'), {
+        description: 'Actions, Reducer, Service, Effect and Module',
+        actions: [].concat(plopActions.ngrx, plopActions.service, plopActions.module)
       })
   );
 }
 
 function ngrxWithoutService(plop) {
   plop.setGenerator(
-    'ngrx without Service', 
-    Object.assign({}, defaults('ngrx without Services'), {
+    'Generate only ngrx files', 
+    Object.assign({}, defaults('Generate only ngrx files'), {
       description: 'Actions, Reducer and Effect',
       actions: [].concat(plopActions.ngrx)
     })
