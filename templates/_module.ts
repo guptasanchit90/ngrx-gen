@@ -1,7 +1,7 @@
 import { HttpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
 import { NgModule, ModuleWithProviders } from '@angular/core';
-import { {{properCase name }}Service } from './{{ lowerCase name }}.service';
+import { {{properCase name }}Service } from './{{ dashCase name }}.service';
 
 @NgModule({
   imports: [

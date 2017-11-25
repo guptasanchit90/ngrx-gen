@@ -1,7 +1,7 @@
 import { HttpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
 import { NgModule, ModuleWithProviders } from '@angular/core';
-import { NgrxDemoService } from './ngrxdemo.service';
+import { NgrxDemoService } from './ngrx-demo.service';
 
 @NgModule({
   imports: [

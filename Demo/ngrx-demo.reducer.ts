@@ -1,4 +1,4 @@
-import * as ngrxDemo from './ngrxdemo.actions';
+import * as ngrxDemo from './ngrx-demo.actions';
 
 export interface State {
   loading: boolean;
