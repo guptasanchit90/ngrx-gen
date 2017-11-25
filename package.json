@@ -1,0 +1,26 @@
+{
+  "name": "ngrx-gen",
+  "version": "0.0.3",
+  "description": "A module level ngrx template generator using Plop",
+  "main": "index.js",
+  "scripts": {
+    "create": "plop"
+  },
+  "author": "Sanchit Gupta",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guptasanchit90/ngrx-gen"
+  },
+  "bin": {
+    "ngrx-gen": "index.js"
+  },
+  "dependencies": {
+    "find-package-json": "^1.0.0",
+    "lodash.get": "^4.4.2",
+    "npm-run": "^4.1.2",
+    "pkg-dir": "^2.0.0",
+    "plop": "^1.8.0",
+    "shelljs": "^0.7.8"
+  }
+}
