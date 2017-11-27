@@ -14,6 +14,11 @@ const plopActions = {
         type: 'add',
         path: '{{dir dirPath}}/{{dashCase name}}.effects.ts',
         templateFile: './templates/_effect.ts'
+      },
+      {
+        type: 'add',
+        path: '{{dir dirPath}}/{{dashCase name}}.state.ts',
+        templateFile: './templates/_state.ts'
       }
     ],
     service: [

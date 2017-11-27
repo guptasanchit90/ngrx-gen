@@ -1,18 +1,7 @@
 import * as {{ camelCase name }} from './{{ dashCase name }}.actions';
+import { {{ properCase name }}State, initial{{ properCase name }}State } from './{{ dashCase name }}.state';
 
-export interface State {
-  loading: boolean;
-  entities: { [id: string]: any };
-  result: string[];
-}
-
-export const initialState: State = {
-  loading: false,
-  entities: {},
-  result: []
-}
-
-export function reducer(state = initialState, action: {{ camelCase name }}.Actions): State {
+export function reducer(state = initial{{ properCase name }}State, action: {{ camelCase name }}.Actions): {{ properCase name }}State {
   switch (action.type) {
     case {{ camelCase name }}.GET: {
       return {

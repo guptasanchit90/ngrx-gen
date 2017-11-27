@@ -1,18 +1,7 @@
 import * as ngrxDemo from './ngrx-demo.actions';
+import { NgrxDemoState, initialNgrxDemoState } from './ngrx-demo.state';
 
-export interface State {
-  loading: boolean;
-  entities: { [id: string]: any };
-  result: string[];
-}
-
-export const initialState: State = {
-  loading: false,
-  entities: {},
-  result: []
-}
-
-export function reducer(state = initialState, action: ngrxDemo.Actions): State {
+export function reducer(state = initialNgrxDemoState, action: ngrxDemo.Actions): NgrxDemoState {
   switch (action.type) {
     case ngrxDemo.GET: {
       return {
