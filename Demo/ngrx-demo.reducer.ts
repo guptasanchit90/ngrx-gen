@@ -1,7 +1,7 @@
 import * as ngrxDemo from './ngrx-demo.actions';
 import { NgrxDemoState, initialNgrxDemoState } from './ngrx-demo.state';
 
-export function reducer(state = initialNgrxDemoState, action: ngrxDemo.Actions): NgrxDemoState {
+export function ngrxDemoReducer(state = initialNgrxDemoState, action: ngrxDemo.Actions): NgrxDemoState {
   switch (action.type) {
     case ngrxDemo.GET: {
       return {

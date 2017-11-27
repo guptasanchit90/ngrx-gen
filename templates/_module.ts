@@ -1,12 +1,24 @@
 import { HttpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
 import { NgModule, ModuleWithProviders } from '@angular/core';
+import { StoreModule, ActionReducerMap } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+
 import { {{properCase name }}Service } from './{{ dashCase name }}.service';
+import { {{camelCase name}}Reducer } from './{{ dashCase name }}.reducer';
+import { {{properCase name }}Effects } from './{{ dashCase name }}.effects';
+
+export const reducers: ActionReducerMap<any> = {
+  {{camelCase name}}State: {{camelCase name}}Reducer
+};
+
 
 @NgModule({
   imports: [
     CommonModule,
-    HttpModule
+    HttpModule,
+    StoreModule.forFeature("{{properCase name}}", reducers),
+    EffectsModule.forFeature([{{properCase name }}Effects])
   ],
   exports: [],
   declarations: []
@@ -19,3 +31,8 @@ export class {{ properCase name }}Module {
     };
   }
 }
+
+
+export { {{properCase name }}Service } from './{{ dashCase name }}.service';
+export * from './{{ dashCase name }}.actions';
+export { {{properCase name }}State } from './{{ dashCase name }}.state';
