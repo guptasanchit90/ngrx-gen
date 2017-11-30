@@ -34,7 +34,7 @@ const defaults = function(name) {
 }
 
 function ngrxWithService(plop) {
-    plop.setGenerator('Generate complete module', 
+    plop.setGenerator('Generate complete module (Recommended)', 
       Object.assign({}, defaults('Generate complete module'), {
         description: 'Actions, Reducer, Service, Effect, State and Module',
         actions: [].concat(plopActions.ngrx, plopActions.service, plopActions.module)
@@ -61,6 +61,8 @@ module.exports = function (plop) {
 
     return nodePath.resolve(process.cwd(), '.');
   });
+
+  plop.setWelcomeMessage("Hello, select one of the following option");
 
   ngrxWithService(plop);
   ngrxWithoutService(plop);
