@@ -8,16 +8,11 @@ import { NgrxDemoService } from './ngrx-demo.service';
 import { ngrxDemoReducer } from './ngrx-demo.reducer';
 import { NgrxDemoEffects } from './ngrx-demo.effects';
 
-export const reducers: ActionReducerMap<any> = {
-  ngrxDemoState: ngrxDemoReducer
-};
-
-
 @NgModule({
   imports: [
     CommonModule,
     HttpModule,
-    StoreModule.forFeature("NgrxDemo", reducers),
+    StoreModule.forFeature("NgrxDemo", ngrxDemoReducer),
     EffectsModule.forFeature([NgrxDemoEffects])
   ],
   exports: [],

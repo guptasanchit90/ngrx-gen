@@ -1,6 +1,6 @@
 {
   "name": "ngrx-gen",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A module level ngrx template generator using Plop",
   "homepage": "https://www.npmjs.com/package/ngrx-gen",
   "main": "index.js",

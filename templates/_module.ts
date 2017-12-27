@@ -8,16 +8,11 @@ import { {{properCase name }}Service } from './{{ dashCase name }}.service';
 import { {{camelCase name}}Reducer } from './{{ dashCase name }}.reducer';
 import { {{properCase name }}Effects } from './{{ dashCase name }}.effects';
 
-export const reducers: ActionReducerMap<any> = {
-  {{camelCase name}}State: {{camelCase name}}Reducer
-};
-
-
 @NgModule({
   imports: [
     CommonModule,
     HttpModule,
-    StoreModule.forFeature("{{properCase name}}", reducers),
+    StoreModule.forFeature("{{properCase name}}", {{camelCase name}}Reducer),
     EffectsModule.forFeature([{{properCase name }}Effects])
   ],
   exports: [],
