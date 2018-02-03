@@ -27,7 +27,6 @@ export class {{ properCase name }}Module {
   }
 }
 
-
 export { {{properCase name }}Service } from './{{ dashCase name }}.service';
 export * from './{{ dashCase name }}.actions';
 export { {{properCase name }}State } from './{{ dashCase name }}.state';
