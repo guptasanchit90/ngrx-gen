@@ -27,4 +27,3 @@ export type Actions =
   | GetAction
   | GetSuccessAction
   | GetErrorAction;
-  

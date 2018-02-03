@@ -7,7 +7,7 @@ export function {{camelCase name}}Reducer(state = initial{{ properCase name }}St
       return {
         ...state,
         loading: true
-      }
+      };
     }
 
     case {{ camelCase name }}.GET_SUCCESS: {

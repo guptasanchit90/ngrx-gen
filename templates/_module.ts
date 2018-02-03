@@ -12,7 +12,7 @@ import { {{properCase name }}Effects } from './{{ dashCase name }}.effects';
   imports: [
     CommonModule,
     HttpModule,
-    StoreModule.forFeature("{{properCase name}}", {{camelCase name}}Reducer),
+    StoreModule.forFeature('{{properCase name}}', {{camelCase name}}Reducer),
     EffectsModule.forFeature([{{properCase name }}Effects])
   ],
   exports: [],

@@ -6,4 +6,4 @@ export interface {{ properCase name }}State {
 export const initial{{ properCase name }}State: {{ properCase name }}State = {
     loading: false,
     result: []
-}
+};
