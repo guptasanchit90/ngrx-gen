@@ -1,6 +1,12 @@
 import { Action } from '@ngrx/store';
 
-// Actions
+/**
+ * Good Action hygiene
+ * 1. Actions names should be readable and easy to debug
+ * 2. Actions should be unique for an intent
+ * 3. Payload should be an Object instead of using the variable directly
+ */
+
 export const GET = '[{{ titleCase name }}] Get';
 export const GET_SUCCESS = '[{{ titleCase name }}] Get Success';
 export const GET_ERROR = '[{{ titleCase name }}] Get Error';

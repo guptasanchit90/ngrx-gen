@@ -33,7 +33,7 @@
   "dependencies": {
     "find-package-json": "^1.0.0",
     "lodash.get": "^4.4.2",
-    "npm-run": "^4.1.2",
+    "npm-run": "^5.0.1",
     "pkg-dir": "^2.0.0",
     "plop": "^1.8.0",
     "shelljs": "^0.7.8"
