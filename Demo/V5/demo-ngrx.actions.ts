@@ -1,9 +1,15 @@
 import { Action } from '@ngrx/store';
 
-// Actions
-export const GET = '[Ngrx Demo] Get';
-export const GET_SUCCESS = '[Ngrx Demo] Get Success';
-export const GET_ERROR = '[Ngrx Demo] Get Error';
+/**
+ * Good Action hygiene
+ * 1. Actions names should be readable and easy to debug
+ * 2. Actions should be unique for an intent
+ * 3. Payload should be an Object instead of using the variable directly
+ */
+
+export const GET = '[Demo Ngrx] Get';
+export const GET_SUCCESS = '[Demo Ngrx] Get Success';
+export const GET_ERROR = '[Demo Ngrx] Get Error';
 
 // Create actions with or without payload
 export class GetAction implements Action {
@@ -27,4 +33,3 @@ export type Actions =
   | GetAction
   | GetSuccessAction
   | GetErrorAction;
-  
