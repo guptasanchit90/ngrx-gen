@@ -1,6 +1,6 @@
 {
   "name": "ngrx-gen",
-  "version": "0.1.1",
+  "version": "1.1.0",
   "description": "A module level ngrx template generator using Plop",
   "homepage": "https://www.npmjs.com/package/ngrx-gen",
   "main": "index.js",
@@ -18,7 +18,8 @@
     "actions",
     "reducer",
     "redux",
-    "angular"
+    "angular",
+    "state management"
   ],
   "repository": {
     "type": "git",

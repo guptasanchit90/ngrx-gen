@@ -14,9 +14,7 @@ export class {{ properCase name }}Effects {
   @Effect() get$ = this.actions$
       .ofType({{ camelCase name }}.GET)
       .switchMap((payload) => this.{{ camelCase name }}Service.get()
-        // If successful, dispatch success action with result
         .map((res) => ({ type: {{ camelCase name }}.GET_SUCCESS, payload: res.json() }))
-        // If request fails, dispatch failed action
         .catch(() => Observable.of({ type: {{ camelCase name }}.GET_ERROR}))
       );
 

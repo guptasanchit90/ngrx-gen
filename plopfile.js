@@ -1,11 +1,6 @@
-const get = require('lodash.get');
-const pkg = require('./package.json');
-const finder = require('find-package-json');
-const pjson = finder().next().value;
 const nodePath = require('path');
-const pkgDir = require('pkg-dir');
 
-var plopActions = require('./plopActions').plopActions;
+var getPlopActions = require('./plopActions').getPlopActions;
 
 function validate(name, value) {
   if ((/.+/).test(value)) {
@@ -33,21 +28,20 @@ const defaults = function(name) {
   }
 }
 
-function ngrxWithService(plop) {
-    plop.setGenerator('Generate complete module (Recommended)', 
-      Object.assign({}, defaults('Generate complete module'), {
+function ngrxForRXJSVersion6(plop) {
+    plop.setGenerator('RXJS Version 6', 
+      Object.assign({}, defaults('Generate NGRX feature module with RXJS version 6'), {
         description: 'Actions, Reducer, Service, Effect, State and Module',
-        actions: [].concat(plopActions.ngrx, plopActions.service, plopActions.module)
+        actions: [].concat(getPlopActions('rxjs6'))
       })
   );
 }
 
-function ngrxWithoutService(plop) {
-  plop.setGenerator(
-    'Generate only ngrx files', 
-    Object.assign({}, defaults('Generate only ngrx files'), {
-      description: 'Actions, Reducer, Effect and State',
-      actions: [].concat(plopActions.ngrx)
+function ngrxForRXJSVersion5(plop) {
+  plop.setGenerator('RXJS Version 5', 
+    Object.assign({}, defaults('Generate NGRX feature module with RXJS version 5'), {
+      description: 'Actions, Reducer, Service, Effect, State and Module',
+      actions: [].concat(getPlopActions('rxjs5'))
     })
 );
 }
@@ -64,7 +58,7 @@ module.exports = function (plop) {
 
   plop.setWelcomeMessage("Hello, select one of the following option");
 
-  ngrxWithService(plop);
-  ngrxWithoutService(plop);
+  ngrxForRXJSVersion6(plop);
+  ngrxForRXJSVersion5(plop);
 
 };

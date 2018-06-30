@@ -1,7 +1,7 @@
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { NgModule, ModuleWithProviders } from '@angular/core';
-import { StoreModule, ActionReducerMap } from '@ngrx/store';
+import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 
 import { {{properCase name }}Service } from './{{ dashCase name }}.service';
@@ -11,7 +11,7 @@ import { {{properCase name }}Effects } from './{{ dashCase name }}.effects';
 @NgModule({
   imports: [
     CommonModule,
-    HttpModule,
+    HttpClientModule,
     StoreModule.forFeature('{{properCase name}}', {{camelCase name}}Reducer),
     EffectsModule.forFeature([{{properCase name }}Effects])
   ],

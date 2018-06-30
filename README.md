@@ -1,5 +1,5 @@
 # ngrx-gen
-A simple ngrx generator
+A simple ngrx generator supporting RXJS version 5 and version 6
 
 ## How to
 
